@@ -1,0 +1,13 @@
+<h2>Scan QR Code in Authenticator App</h2>
+<img src="@ViewBag.QrCodeUrl" alt="QR Code" />
+
+<form method="post">
+    <label>Enter code from your app:</label>
+    <input name="code" />
+    <button type="submit">Verify</button>
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red">@ViewBag.Error</p>
+}
